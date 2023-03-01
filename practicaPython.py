@@ -51,4 +51,4 @@ diccionario = { 'Name' : nombre, 'Age' : edad, 'Address' : direccion, 'PhoneNum'
 print(f'Futuro programador {nombre}, tienes {edad} años, vives en {direccion} (Chimba de lugar) y tu numero de telefono es {telefono}. :)')
 
 for valor in diccionario.values():
-    print(valor)
+    print(valor)   
