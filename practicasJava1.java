@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class practicasJava1 {
     public static void main(String[] args) {
 
-        //While
-        /*Scanner diaDeLaSemana = new Scanner(System.in);
+        //Switch
+        Scanner diaDeLaSemana = new Scanner(System.in);
 
         System.out.println("Escribe un dia de la semana: ");
         String dia = diaDeLaSemana.nextLine();
@@ -20,10 +20,9 @@ public class practicasJava1 {
             case "Domingo" -> System.out.println(dia + " No es un dia laboral. :)");
             default -> System.out.println("No has elegido un dia");
         }
-        */
 
         //Ventas
-        /*Scanner ventas = new Scanner(System.in);
+        Scanner ventas = new Scanner(System.in);
 
         System.out.println("Numero de manzanas vendidas: ");
         int manzanas = ventas.nextInt();
@@ -60,12 +59,31 @@ public class practicasJava1 {
         double gananciasAguacate = (aguacates * precioAguacate);
         double gananciasMelon = (melones * precioMelon);
 
-        System.out.println("HIciste $ " + gananciasManzana + " en manzanas");
-        System.out.println("HIciste $ " + gananciasPera + " en peras");
-        System.out.println("HIciste $ " + gananciasAguacate + " en aguacates");
-        System.out.println("HIciste $ " + gananciasMelon + " en melones");
+        System.out.println("Hiciste $ " + gananciasManzana + " en manzanas");
+        System.out.println("Hiciste $ " + gananciasPera + " en peras");
+        System.out.println("Hiciste $ " + gananciasAguacate + " en aguacates");
+        System.out.println("Hiciste $ " + gananciasMelon + " en melones");
 
         System.out.println("Las ganancias totales son de: $ " + (gananciasManzana + gananciasPera + gananciasAguacate + gananciasMelon));
-        */
+        
+        //Do while
+        int numeroDigitado = 0;
+
+        do {
+            Scanner numero = new Scanner(System.in);
+
+            System.out.println("Digite un numero igual o mayor que 0: ");
+            numeroDigitado = numero.nextInt();
+
+            if (numeroDigitado > 0) {
+                System.out.println("Digitaste el numero " + numeroDigitado + ": Este numero es mayor que 0");
+            } else if (numeroDigitado == 0) {
+                System.out.println("Digitaste el numero " + numeroDigitado + ": Este numero es igual a 0");
+            } else {
+                System.out.println("Elegiste el numero " + numeroDigitado + ": Este numero es menor que 0");
+            }
+        } while (numeroDigitado < 0) ;
+
+        System.out.println("Saliste del bucle al digitar un numero igual o mayor que 0");
     }
 }
